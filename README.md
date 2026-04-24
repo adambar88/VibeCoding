@@ -38,9 +38,11 @@ A complete development team that works autonomously:
 
 ### Instructions (`.github/instructions/`)
 
+- **Vibe coding** — Core workflow and agent collaboration patterns
+- **Code quality** — Naming, error handling, security, maintainability
+- **Component** — UI component patterns (customize for your framework)
+- **Testing** — Testing patterns (customize for your test framework)
 - **Agent protocol** — Inter-agent communication standard
-- **React** — Component patterns and conventions
-- **Testing** — Vitest + RTL patterns
 
 ### MCP Servers (`.vscode/mcp.json`)
 
@@ -99,7 +101,7 @@ Edit `.github/copilot-instructions.md` — the `<!-- UPDATE -->` sections mark w
 
 ### For a different project structure
 
-Edit `.github/instructions/react.instructions.md` or create new instruction files for your framework.
+Edit `.github/instructions/component.instructions.md` or create new instruction files for your framework.
 
 ### For additional prompts
 
