@@ -58,7 +58,8 @@ Click **"Use this template"** on GitHub, or clone and reinitialize:
 # Option B: Manual clone
 git clone https://github.com/YOUR_USERNAME/VibeCoding.git my-new-project
 cd my-new-project
-rm -rf .git
+rm -rf .git              # bash/macOS/Linux
+# Remove-Item -Recurse -Force .git   # PowerShell (Windows)
 git init
 git add .
 git commit -m "Initial commit from Vibe Coding template"
