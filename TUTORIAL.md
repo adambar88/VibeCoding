@@ -19,7 +19,7 @@
 11. [Team Collaboration — Agent Team](#11-team-collaboration--agent-team)
 12. [Autonomous SDLC — Building a Full App](#12-autonomous-sdlc--building-a-full-app)
 13. [Power Features & Integrations](#13-power-features--integrations)
-14. [Recommended Extensions](#14-recommended-extensions)
+14. [Recommended Extensions & Integrations](#14-recommended-extensions--integrations)
 15. [Tips for Maximum Efficiency](#15-tips-for-maximum-efficiency)
 
 ---
@@ -50,7 +50,7 @@ Enable these in your `settings.json`:
 
 Create this folder structure in any project to unlock all features:
 
-```
+```text
 your-project/
 ├── .github/
 │   ├── copilot-instructions.md    # Workspace-wide instructions (always loaded)
@@ -84,7 +84,7 @@ your-project/
 ## 2. The 7 Customization Primitives
 
 | Primitive | When to Use | Loaded |
-|-----------|-------------|--------|
+| ----------- | ------------- | -------- |
 | **Workspace Instructions** | Always-on project standards | Automatically, every request |
 | **File Instructions** | Language/framework specific rules | On file match or task relevance |
 | **Prompts** | Reusable single-task templates | On-demand via `/` slash command |
@@ -95,7 +95,7 @@ your-project/
 
 ### Decision Flowchart
 
-```
+```text
 Does it apply to EVERY task?
   → Yes → Workspace Instructions (copilot-instructions.md)
   → No  → Does it apply to specific FILE TYPES?
@@ -396,7 +396,7 @@ You are a development lead. For complex tasks:
 
 ### Example: Deploy Skill
 
-```
+```text
 .github/skills/deploy/
 ├── SKILL.md
 ├── scripts/
@@ -430,7 +430,7 @@ description: "Deploy the application to staging or production. Use when asked to
 ### Skills vs Prompts
 
 | Feature | Prompt | Skill |
-|---------|--------|-------|
+| --------- | -------- | ------- |
 | Slash command | Yes | Yes |
 | Bundled scripts | No | Yes |
 | Reference docs | No | Yes |
@@ -447,7 +447,7 @@ description: "Deploy the application to staging or production. Use when asked to
 ### Available Events
 
 | Event | When |
-|-------|------|
+| ------- | ------ |
 | `SessionStart` | First prompt of session |
 | `UserPromptSubmit` | User sends a message |
 | `PreToolUse` | Before any tool runs |
@@ -489,7 +489,7 @@ description: "Deploy the application to staging or production. Use when asked to
 ### Hooks vs Instructions
 
 | Need | Use |
-|------|-----|
+| ------ | ----- |
 | "Prefer functional components" | Instructions (guidance) |
 | "Always run prettier after editing" | Hook (guaranteed) |
 | "Never run `rm -rf /`" | Hook (enforcement) |
@@ -534,7 +534,7 @@ description: "Deploy the application to staging or production. Use when asked to
 ### Popular MCP Servers
 
 | Server | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `server-github` | Issues, PRs, repos, code search |
 | `server-postgres` | Query databases directly |
 | `server-filesystem` | Extended file access |
@@ -558,7 +558,7 @@ tools: [read, search, postgres/*]
 
 ### The Loop
 
-```
+```text
 1. DESCRIBE what you want in natural language
 2. Let the agent BUILD it (Agent mode)
 3. REVIEW the changes
@@ -568,7 +568,7 @@ tools: [read, search, postgres/*]
 
 ### Practical Session Example
 
-```
+```text
 You: "Create a user authentication feature with login, register,
       and password reset. Use React Query, Zustand for auth state,
       and the API client pattern from our shared folder."
@@ -595,7 +595,7 @@ Copilot: [applies fixes based on reviewer feedback]
 ### Agent Mode vs Ask Mode vs Edit Mode
 
 | Mode | Purpose | When to Use |
-|------|---------|-------------|
+| ------ | --------- | ------------- |
 | **Agent** | Autonomous coding — reads, writes, searches, runs commands | Building features, refactoring, debugging |
 | **Ask** | Q&A and explanations — read-only | Understanding code, learning, design discussions |
 | **Edit** | Inline edits with diff view | Quick targeted changes to specific files |
@@ -609,7 +609,7 @@ Your project now includes a full team of specialized agents that simulate a real
 ### The Team
 
 | Agent | Role | Tools | Read-Only? |
-|-------|------|-------|------------|
+| ------- | ------ | ------- | ------------ |
 | `@tech-lead` | **Orchestrator** — coordinates all agents through the full SDLC | all + agent delegation | No |
 | `@product-owner` | Defines requirements, user stories, acceptance criteria, priorities | read, search, web | Yes |
 | `@project-manager` | Task breakdown, sprint planning, effort estimation, progress tracking | read, search, todo | Yes |
@@ -632,7 +632,7 @@ Your project now includes a full team of specialized agents that simulate a real
 
 Let the tech lead run the full process:
 
-```
+```text
 You: @tech-lead Build a user authentication system with login,
      register, password reset, and OAuth support.
 ```
@@ -655,7 +655,7 @@ The tech lead will:
 
 Pick the right specialist for a focused task:
 
-```
+```text
 You: @product-owner Write user stories for a shopping cart feature
 
 You: @architect Should we use a monorepo or separate repos for
@@ -675,7 +675,7 @@ You: @devops Set up a GitHub Actions CI pipeline for this project
 
 Run agents in sequence yourself, carrying context forward:
 
-```
+```text
 Step 1:
 You: @product-owner Define the user stories for a dark mode feature
 
@@ -698,7 +698,7 @@ You: @reviewer Review the dark mode implementation
 
 Here's a complete session building a notification system:
 
-```
+```text
 ━━━ PHASE 1: DEFINE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 You: @product-owner We need an in-app notification system.
@@ -813,7 +813,7 @@ This is the most powerful feature: a single command that runs your entire agent 
 
 Type `/build-app` in chat and describe what you want to build. The tech lead takes over and runs all phases autonomously without stopping:
 
-```
+```text
 /build-app A task management app with user authentication,
           project boards, drag-and-drop task cards, real-time
           collaboration, and dark mode support.
@@ -821,7 +821,7 @@ Type `/build-app` in chat and describe what you want to build. The tech lead tak
 
 ### What Happens Automatically
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │  PHASE 1: REQUIREMENTS          @product-owner          │
 │  → User stories, acceptance criteria, MVP scope          │
@@ -888,7 +888,7 @@ The `@tech-lead` orchestrator:
 The pipeline will NOT proceed past a gate until criteria are met:
 
 | Phase | Gate Criteria |
-|-------|---------------|
+| ------- | --------------- |
 | Requirements | User stories + acceptance criteria exist |
 | Planning | Tasks broken down, estimated, assigned |
 | Research | Tech stack researched, alternatives compared, recommendations made |
@@ -906,7 +906,7 @@ The pipeline will NOT proceed past a gate until criteria are met:
 
 When a gatekeeper agent (reviewer, security, tester) finds blocking issues:
 
-```
+```text
 @reviewer finds Critical bug in auth flow
     ↓
 @tech-lead routes fix request to @developer with exact details
@@ -920,7 +920,7 @@ When a gatekeeper agent (reviewer, security, tester) finds blocking issues:
 
 ### Example: Building an Enterprise App
 
-```
+```text
 You: /build-app An enterprise project management platform with:
      - User authentication (email + OAuth)
      - Team workspaces with role-based access
@@ -958,7 +958,7 @@ Then sit back. The team will:
 ### Other Autonomous Prompts
 
 | Prompt | What It Does |
-|--------|--------------|
+| -------- | -------------- |
 | `/build-app` | Full SDLC from scratch |
 | `/create-component` | Scaffold a single component with tests |
 | `/write-tests` | Generate tests for existing code |
@@ -1016,7 +1016,7 @@ Request AI reviews on pull requests directly from GitHub:
 ### 9. `@workspace` and Context Variables
 
 | Variable | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | `@workspace` | Search entire codebase for context |
 | `#file` | Attach specific file to context |
 | `#selection` | Include selected code |
@@ -1029,7 +1029,7 @@ Request AI reviews on pull requests directly from GitHub:
 ### 10. Copilot Chat Participants
 
 | Participant | Purpose |
-|-------------|---------|
+| ------------- | --------- |
 | `@workspace` | Workspace-aware questions |
 | `@terminal` | Terminal command help |
 | `@vscode` | VS Code settings and features |
@@ -1042,7 +1042,7 @@ Request AI reviews on pull requests directly from GitHub:
 ### Extensions That Supercharge Vibe Coding
 
 | Extension | Why |
-|-----------|-----|
+| ----------- | ----- |
 | **GitHub Copilot** | Core AI pair programmer |
 | **GitHub Copilot Chat** | Conversational AI with Agent mode |
 | **Error Lens** | Inline error display — Copilot can see these via `#problems` |
@@ -1057,7 +1057,7 @@ Request AI reviews on pull requests directly from GitHub:
 ### MCP Integrations Worth Setting Up
 
 | Integration | Value |
-|-------------|-------|
+| ------------- | ------- |
 | **GitHub MCP** | Manage issues, PRs, and code search from chat |
 | **Database MCP** | Query and understand your data schema |
 | **Brave Search MCP** | Research docs, libraries, and solutions |
@@ -1091,7 +1091,7 @@ Request AI reviews on pull requests directly from GitHub:
 
 ### The Vibe Coding Maturity Model
 
-```
+```text
 Level 0: Using autocomplete only
 Level 1: Using Copilot Chat for Q&A
 Level 2: Using Agent mode for feature building

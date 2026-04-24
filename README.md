@@ -9,7 +9,7 @@ A GitHub template repository with a full AI-powered development team for GitHub 
 A complete development team that works autonomously:
 
 | Agent | Role |
-|-------|------|
+| ------- | ------ |
 | `@tech-lead` | Orchestrates all agents through the full SDLC |
 | `@product-owner` | User stories, acceptance criteria, prioritization |
 | `@project-manager` | Task breakdown, sprint planning, progress tracking |
@@ -29,7 +29,7 @@ A complete development team that works autonomously:
 ### Reusable Prompts (`.github/prompts/`)
 
 | Prompt | What It Does |
-|--------|-------------|
+| -------- | ------------- |
 | `/build-app` | Run the full SDLC autonomously — 11+ phases, 15+ agents |
 | `/init-project` | Customize this template for your specific stack |
 | `/create-component` | Scaffold a component with types and tests |
@@ -66,7 +66,7 @@ git commit -m "Initial commit from Vibe Coding template"
 
 ### 2. Open in VS Code and initialize
 
-```
+```text
 /init-project A SaaS dashboard built with Next.js, Prisma, and PostgreSQL
 ```
 
@@ -74,7 +74,7 @@ This customizes all template files for your specific stack.
 
 ### 3. Build your app
 
-```
+```text
 /build-app [describe your application in detail]
 ```
 
@@ -82,7 +82,7 @@ The full team runs autonomously: requirements → planning → research → arch
 
 ### 4. Iterate with individual agents
 
-```
+```text
 @developer Add a dark mode toggle to the settings page
 @tester Write tests for the new auth flow
 @reviewer Check the API routes for issues
