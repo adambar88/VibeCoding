@@ -181,8 +181,10 @@ description: "Use when creating or editing React components. Covers component pa
 - Extract custom hooks when logic is reused across 2+ components
 - Use `Suspense` boundaries for async components
 - Prefer composition over prop drilling (use Context or Zustand)
+```
 
-## Component Template
+Component template example:
+
 ```tsx
 interface Props {
   title: string;
@@ -641,11 +643,13 @@ The tech lead will:
 2. Ask `@project-manager` to break tasks down and estimate
 3. Ask `@researcher` to find the best technologies and libraries
 4. Ask `@architect` to propose the technical approach (using research findings)
-5. Ask `@designer` to plan the UI components
-6. Delegate coding to `@developer` and `@backend-developer`
-7. Get `@tester` to write tests
-8. Get `@reviewer` and `@security` to audit
-9. Ask `@tech-writer` to document
+5. Ask `@recruiter` to hire any specialist agents the stack requires
+6. Ask `@designer` to plan the UI components
+7. Ask `@instructions-engineer` to create tailored instruction files for the stack
+8. Delegate coding to `@developer`, `@backend-developer`, and any specialists
+9. Get `@tester` to write tests
+10. Get `@reviewer` and `@security` to audit
+11. Ask `@tech-writer` to document
 
 #### Approach 2: Direct Agent Selection (Best for Targeted Work)
 
@@ -807,7 +811,7 @@ This is the most powerful feature: a single command that runs your entire agent 
 
 ### The `/build-app` Prompt
 
-Type `/build-app` in chat and describe what you want to build. The tech lead takes over and runs 11 phases without stopping:
+Type `/build-app` in chat and describe what you want to build. The tech lead takes over and runs all phases autonomously without stopping:
 
 ```
 /build-app A task management app with user authentication,

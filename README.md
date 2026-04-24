@@ -78,7 +78,7 @@ This customizes all template files for your specific stack.
 /build-app [describe your application in detail]
 ```
 
-The full team runs autonomously: requirements → planning → research → architecture → design → implementation → testing → review → security → docs → deployment.
+The full team runs autonomously: requirements → planning → research → architecture → recruitment → design → setup + instructions → implementation → testing → review → security → docs → deployment.
 
 ### 4. Iterate with individual agents
 
