@@ -58,6 +58,16 @@ Delegate to @architect:
 
 **Gate**: Do NOT proceed until architecture is documented and folder structure is defined.
 
+### PHASE 3.5: RECRUITMENT (Recruiter)
+Delegate to @recruiter:
+- Review the architecture decisions and tech stack from Phase 3
+- Identify technologies that need specialist expertise beyond @developer/@backend-developer
+- For each specialist needed: create a new `.agent.md` file with expert-level instructions
+- Register new agents in @tech-lead's team roster
+- Examples: WebSocket specialist, GraphQL developer, ML engineer, mobile developer
+
+**Gate**: All necessary specialists recruited and registered before implementation begins.
+
 ### PHASE 4: UI/UX DESIGN (Designer)
 Delegate to @designer:
 - Define the component hierarchy for each feature

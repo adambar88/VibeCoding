@@ -612,6 +612,7 @@ Your project now includes a full team of specialized agents that simulate a real
 | `@product-owner` | Defines requirements, user stories, acceptance criteria, priorities | read, search, web | Yes |
 | `@project-manager` | Task breakdown, sprint planning, effort estimation, progress tracking | read, search, todo | Yes |
 | `@researcher` | Technology research, library comparison, AI tool discovery | read, search, web | Yes |
+| `@recruiter` | Hires specialist developers, creates new agent files for specific tech | read, edit, search, web | No |
 | `@architect` | System design, folder structure, dependency analysis | read, search, web | Yes |
 | `@designer` | UI/UX decisions, accessibility audits, responsive design | read, search, web | Yes |
 | `@instructions-engineer` | Creates tailored .instructions.md files for the chosen stack | read, edit, search, web | No |
@@ -829,6 +830,9 @@ Type `/build-app` in chat and describe what you want to build. The tech lead tak
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 3: ARCHITECTURE          @architect               │
 │  → System design, folder structure, data models, ADRs    │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+│  PHASE 3.5: RECRUITMENT         @recruiter               │
+│  → Hire specialist devs, create agent files for stack   │
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 4: UI/UX DESIGN          @designer                │
 │  → Component specs, design tokens, accessibility plan    │
