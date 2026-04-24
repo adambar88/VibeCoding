@@ -4,7 +4,7 @@ A GitHub template repository with a full AI-powered development team for GitHub 
 
 ## What's Included
 
-### 12 Custom Agents (`.github/agents/`)
+### 13 Custom Agents (`.github/agents/`)
 A complete development team that works autonomously:
 
 | Agent | Role |
@@ -12,6 +12,7 @@ A complete development team that works autonomously:
 | `@tech-lead` | Orchestrates all agents through the full SDLC |
 | `@product-owner` | User stories, acceptance criteria, prioritization |
 | `@project-manager` | Task breakdown, sprint planning, progress tracking |
+| `@researcher` | Technology research, library comparison, AI tool discovery |
 | `@architect` | System design, folder structure, data models |
 | `@designer` | UI/UX, accessibility, responsive design |
 | `@developer` | Frontend implementation |
@@ -72,7 +73,7 @@ This customizes all template files for your specific stack.
 /build-app [describe your application in detail]
 ```
 
-The full team runs autonomously: requirements → planning → architecture → design → implementation → testing → review → security → docs → deployment.
+The full team runs autonomously: requirements → planning → research → architecture → design → implementation → testing → review → security → docs → deployment.
 
 ### 4. Iterate with individual agents
 

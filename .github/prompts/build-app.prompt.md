@@ -35,12 +35,23 @@ Delegate to @project-manager:
 
 **Gate**: Do NOT proceed until tasks are broken down, estimated, and ordered.
 
+### PHASE 2.5: RESEARCH (Researcher)
+Delegate to @researcher:
+- Research the best tech stack choices for this specific application type
+- Compare libraries for key needs (state management, UI components, auth, etc.)
+- Identify useful AI tools, MCP servers, and Copilot skills that could accelerate development
+- Research best practices and patterns used by similar production applications
+- Check for any critical ecosystem changes or deprecations
+- Evaluate hosting and deployment options
+
+**Gate**: Do NOT proceed until technology recommendations with comparisons and sources exist.
+
 ### PHASE 3: ARCHITECTURE (Architect)
 Delegate to @architect:
 - Define the system architecture (components, data flow, state management)
 - Design the folder structure following `src/features/<name>/` pattern
 - Define the data models and TypeScript interfaces
-- Choose libraries and justify each dependency
+- Choose libraries based on @researcher's recommendations and justify each dependency
 - Define API contracts (endpoints, request/response shapes)
 - Create an Architecture Decision Record (ADR) for key decisions
 - Address non-functional requirements from Phase 1
