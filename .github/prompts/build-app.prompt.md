@@ -79,6 +79,16 @@ Delegate to @designer:
 
 **Gate**: Do NOT proceed until component specs and accessibility plan exist.
 
+### PHASE 4.5: SKILLS DISCOVERY (Skills Scout)
+Delegate to @skills-scout:
+- Analyze the full tech stack from architecture decisions
+- Search skills.sh, anthropics/skills repo, and GitHub for relevant Copilot skills
+- Check user-level skills (~/.agents/skills/) to avoid duplicates
+- Install high-quality skills into `.github/skills/` for the project's specific stack
+- Report which skills were installed, which already existed, and any gaps to fill manually
+
+**Gate**: Do NOT proceed until relevant skills are installed or confirmed unavailable.
+
 ### PHASE 5: PROJECT SETUP (Developer + DevOps + Instructions Engineer)
 Delegate to @developer:
 - Initialize the project: `pnpm create vite@latest` with React + TypeScript

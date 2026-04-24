@@ -618,6 +618,7 @@ Your project now includes a full team of specialized agents that simulate a real
 | `@architect` | System design, folder structure, dependency analysis | read, search, web | Yes |
 | `@designer` | UI/UX decisions, accessibility audits, responsive design | read, search, web | Yes |
 | `@instructions-engineer` | Creates tailored .instructions.md files for the chosen stack | read, edit, search, web | No |
+| `@skills-scout` | Discovers and installs Copilot skills for the project's stack | read, edit, search, web, execute | No |
 | `@developer` | Frontend implementation — React, TypeScript, Tailwind | read, edit, search, execute | No |
 | `@backend-developer` | API design, server-side logic, database operations | read, edit, search, execute | No |
 | `@tester` | Test planning, test writing, QA verification | read, edit, search, execute | No |
@@ -840,6 +841,9 @@ Type `/build-app` in chat and describe what you want to build. The tech lead tak
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 4: UI/UX DESIGN          @designer                │
 │  → Component specs, design tokens, accessibility plan    │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+│  PHASE 4.5: SKILLS DISCOVERY    @skills-scout            │
+│  → Find and install Copilot skills for the tech stack    │
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 5: PROJECT SETUP         @dev + @devops + @instr  │
 │  → Project init, Docker, CI, tailored instructions       │

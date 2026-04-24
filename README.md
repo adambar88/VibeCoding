@@ -4,7 +4,7 @@ A GitHub template repository with a full AI-powered development team for GitHub 
 
 ## What's Included
 
-### 15 Custom Agents (`.github/agents/`)
+### 16 Custom Agents (`.github/agents/`)
 
 A complete development team that works autonomously:
 
@@ -18,6 +18,7 @@ A complete development team that works autonomously:
 | `@architect` | System design, folder structure, data models |
 | `@designer` | UI/UX, accessibility, responsive design |
 | `@instructions-engineer` | Creates tailored Copilot instructions for any stack |
+| `@skills-scout` | Discovers and installs Copilot skills for your tech stack |
 | `@developer` | Frontend implementation |
 | `@backend-developer` | APIs, server logic, databases |
 | `@tester` | Test planning, test writing, QA |
@@ -79,7 +80,7 @@ This customizes all template files for your specific stack.
 /build-app [describe your application in detail]
 ```
 
-The full team runs autonomously: requirements → planning → research → architecture → recruitment → design → setup + instructions → implementation → testing → review → security → docs → deployment.
+The full team runs autonomously: requirements → planning → research → architecture → recruitment → design → skills discovery → setup + instructions → implementation → testing → review → security → docs → deployment.
 
 ### 4. Iterate with individual agents
 
