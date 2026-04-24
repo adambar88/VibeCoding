@@ -611,6 +611,7 @@ Your project now includes a full team of specialized agents that simulate a real
 | `@tech-lead` | **Orchestrator** — coordinates all agents through the full SDLC | all + agent delegation | No |
 | `@product-owner` | Defines requirements, user stories, acceptance criteria, priorities | read, search, web | Yes |
 | `@project-manager` | Task breakdown, sprint planning, effort estimation, progress tracking | read, search, todo | Yes |
+| `@researcher` | Technology research, library comparison, AI tool discovery | read, search, web | Yes |
 | `@architect` | System design, folder structure, dependency analysis | read, search, web | Yes |
 | `@designer` | UI/UX decisions, accessibility audits, responsive design | read, search, web | Yes |
 | `@developer` | Frontend implementation — React, TypeScript, Tailwind | read, edit, search, execute | No |
@@ -636,12 +637,13 @@ The tech lead will:
 
 1. Ask `@product-owner` to define user stories and acceptance criteria
 2. Ask `@project-manager` to break tasks down and estimate
-3. Ask `@architect` to propose the technical approach
-4. Ask `@designer` to plan the UI components
-5. Delegate coding to `@developer` and `@backend-developer`
-6. Get `@tester` to write tests
-7. Get `@reviewer` and `@security` to audit
-8. Ask `@tech-writer` to document
+3. Ask `@researcher` to find the best technologies and libraries
+4. Ask `@architect` to propose the technical approach (using research findings)
+5. Ask `@designer` to plan the UI components
+6. Delegate coding to `@developer` and `@backend-developer`
+7. Get `@tester` to write tests
+8. Get `@reviewer` and `@security` to audit
+9. Ask `@tech-writer` to document
 
 #### Approach 2: Direct Agent Selection (Best for Targeted Work)
 
@@ -656,6 +658,9 @@ You: @architect Should we use a monorepo or separate repos for
 You: @designer Review this component for accessibility issues
 
 You: @security Audit the authentication flow in src/features/auth/
+
+You: @researcher What's the best state management library for
+     React in 2026? Compare Zustand, Jotai, and Redux Toolkit.
 
 You: @devops Set up a GitHub Actions CI pipeline for this project
 ```
@@ -785,7 +790,7 @@ You: @devops Add the WebSocket service to our Docker
 ### Tips for Effective Team Use
 
 1. **Start with `@tech-lead` for big features** — it knows the workflow and delegates automatically
-2. **Use read-only agents freely** — `@product-owner`, `@architect`, `@designer`, `@reviewer`, `@security` can't break anything
+2. **Use read-only agents freely** — `@product-owner`, `@researcher`, `@architect`, `@designer`, `@reviewer`, `@security` can't break anything
 3. **Chain context forward** — reference previous agent outputs when talking to the next agent
 4. **Use `@project-manager` to track progress** — it manages the todo list for you
 5. **Always end with `@reviewer` + `@security`** — quality gates before considering work done
@@ -817,6 +822,9 @@ Type `/build-app` in chat and describe what you want to build. The tech lead tak
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 2: PLANNING              @project-manager         │
 │  → Task breakdown, estimates, sprint plan, todo list     │
+│  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+│  PHASE 2.5: RESEARCH            @researcher              │
+│  → Tech stack research, library comparison, AI tools     │
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
 │  PHASE 3: ARCHITECTURE          @architect               │
 │  → System design, folder structure, data models, ADRs    │
@@ -860,6 +868,7 @@ Each agent follows a **handoff protocol** defined in `.github/instructions/agent
 4. **Escalates** blockers to `@tech-lead` if stuck
 
 The `@tech-lead` orchestrator:
+
 - Passes ALL relevant context from previous phases to the next agent
 - Validates **phase gates** before proceeding (e.g., won't start coding until architecture exists)
 - Runs **fix loops**: if `@reviewer` finds Critical bugs, sends `@developer` back to fix, then re-reviews
@@ -873,6 +882,7 @@ The pipeline will NOT proceed past a gate until criteria are met:
 |-------|---------------|
 | Requirements | User stories + acceptance criteria exist |
 | Planning | Tasks broken down, estimated, assigned |
+| Research | Tech stack researched, alternatives compared, recommendations made |
 | Architecture | System design + folder structure + data models documented |
 | Design | Component specs + accessibility plan exist |
 | Setup | `pnpm dev` runs successfully |
@@ -913,6 +923,7 @@ You: /build-app An enterprise project management platform with:
 ```
 
 Then sit back. The team will:
+
 1. Define 15-20 user stories with acceptance criteria
 2. Break into 30-40 tasks across 3 sprints
 3. Design the full architecture with data models

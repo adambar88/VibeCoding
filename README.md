@@ -5,6 +5,7 @@ A GitHub template repository with a full AI-powered development team for GitHub 
 ## What's Included
 
 ### 13 Custom Agents (`.github/agents/`)
+
 A complete development team that works autonomously:
 
 | Agent | Role |
@@ -33,11 +34,13 @@ A complete development team that works autonomously:
 | `/write-tests` | Generate tests for existing code |
 
 ### Instructions (`.github/instructions/`)
+
 - **Agent protocol** — Inter-agent communication standard
 - **React** — Component patterns and conventions
 - **Testing** — Vitest + RTL patterns
 
 ### MCP Servers (`.vscode/mcp.json`)
+
 - GitHub MCP pre-configured for issues/PRs from chat
 
 ## Quick Start
