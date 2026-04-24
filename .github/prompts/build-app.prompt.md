@@ -69,7 +69,7 @@ Delegate to @designer:
 
 **Gate**: Do NOT proceed until component specs and accessibility plan exist.
 
-### PHASE 5: PROJECT SETUP (Developer + DevOps)
+### PHASE 5: PROJECT SETUP (Developer + DevOps + Instructions Engineer)
 Delegate to @developer:
 - Initialize the project: `pnpm create vite@latest` with React + TypeScript
 - Install dependencies defined by architect
@@ -82,6 +82,12 @@ Then delegate to @devops:
 - Create `Dockerfile` and `docker-compose.yml`
 - Set up GitHub Actions CI pipeline (lint, test, build)
 - Configure environment variable handling
+
+Then delegate to @instructions-engineer:
+- Create tailored `.instructions.md` files for every layer of the chosen stack
+- Update `copilot-instructions.md` to match the actual project stack
+- Ensure all instruction files have proper `applyTo` patterns and keyword-rich descriptions
+- Cover: framework conventions, testing patterns, styling approach, API patterns, state management
 
 **Gate**: Do NOT proceed until `pnpm dev` runs successfully and CI pipeline is defined.
 
