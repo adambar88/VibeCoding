@@ -20,7 +20,9 @@ The project has these MCP servers configured (see `.vscode/mcp.json`). Leverage 
 Every phase in the pipeline MUST be executed. If a phase is not applicable (e.g., no specialist agents needed), you MUST still delegate to the agent and document the outcome as "Evaluated — not needed for this project" in the deliverable file. Do NOT skip phases with reasoning like "not critical" or "standard stack."
 
 ### 2. Save All Deliverables as Markdown Files
-Every phase MUST produce a markdown file in `docs/phases/`. These are the project's institutional memory. Create the `docs/phases/` directory at the start.
+Every phase MUST produce a markdown file in `docs/phases/`. These are the project's institutional memory. Create the `docs/` directory at the start.
+
+**First action**: Create `docs/project-context.md` with App Description, Stack, and User Stories sections. This is the shared context file ALL agents read before starting their phase. See `agent-protocol.instructions.md` for the full structure.
 
 | Phase | File |
 |-------|------|
@@ -53,6 +55,16 @@ When @reviewer or @security finds issues:
 4. Repeat until the gate passes (max 3 iterations — escalate to user after 3 failures)
 
 Do NOT combine review + security into one phase. Run them sequentially.
+
+### 5. Brief Agents Using the Shared Context File
+When delegating to any agent, use this briefing format:
+```
+Read first: docs/project-context.md
+Phase docs: [list relevant docs/phases/*.md files]
+Your deliverable: docs/phases/[NN]-[phase].md
+Instructions: [specific task]
+```
+After each agent completes, ensure they've appended their decisions to `docs/project-context.md`. This eliminates context loss between phases.
 
 ## Core Principle: Autonomous Execution
 
