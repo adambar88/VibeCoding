@@ -15,6 +15,8 @@ description: "Core vibe coding workflow instructions. Defines how agents should 
 - Use `@tech-lead` for complex multi-phase work — it orchestrates the full team
 - Use individual agents (`@developer`, `@tester`, etc.) for focused single tasks
 - Use `/build-app` to run the full autonomous SDLC pipeline
+- Use `/add-feature` to add a feature to an existing app
+- Use `/fix-bug` to diagnose and fix a bug with regression test
 - Use `/init-project` to customize this template for a new tech stack
 
 ## Agent Communication Rules

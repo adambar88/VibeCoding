@@ -31,7 +31,9 @@ A complete development team that works autonomously:
 
 | Prompt | What It Does |
 | -------- | ------------- |
-| `/build-app` | Run the full SDLC autonomously — 11+ phases, 15+ agents |
+| `/build-app` | Run the full SDLC autonomously — 14 phases, 16 agents |
+| `/add-feature` | Add a feature to an existing app (plan → build → test → review) |
+| `/fix-bug` | Diagnose and fix a bug with regression test |
 | `/init-project` | Customize this template for your specific stack |
 | `/create-component` | Scaffold a component with types and tests |
 | `/write-tests` | Generate tests for existing code |

@@ -29,6 +29,8 @@
 ## Agent Team
 This project uses a 16-agent autonomous development team. See `.github/agents/` for all agents. Key workflows:
 - `/build-app` — Full SDLC pipeline (all agents, all phases)
+- `/add-feature` — Add a feature to an existing app (plan → build → test → review)
+- `/fix-bug` — Diagnose and fix a bug with regression test
 - `/init-project` — Customize this template for a new stack
 - `@tech-lead` — Orchestrates the full team for complex features
 - Individual agents (`@developer`, `@tester`, `@security`, etc.) for focused tasks

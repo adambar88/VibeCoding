@@ -126,27 +126,27 @@ You are the ONLY agent that sees the full picture. Other agents only see what yo
 30. Save test report → `docs/phases/10-testing.md` (must include coverage matrix)
 
 ### Phase 8: Review (Fix Loop)
-28. Ask @reviewer to review ALL implementation files
-29. Save review report → `docs/phases/11-review.md`
-30. If Critical issues found:
+31. Ask @reviewer to review ALL implementation files
+32. Save review report → `docs/phases/11-review.md`
+33. If Critical issues found:
     a. Delegate fixes to @developer with exact issue list
     b. Send back to @reviewer for re-review
     c. Update `docs/phases/11-review.md` with each iteration
     d. Max 3 iterations — escalate to user after 3 failures
 
 ### Phase 9: Security Audit (Fix Loop)
-31. Ask @security to audit for vulnerabilities
-32. Save security report → `docs/phases/12-security.md`
-33. If Critical/High vulnerabilities found:
+34. Ask @security to audit for vulnerabilities
+35. Save security report → `docs/phases/12-security.md`
+36. If Critical/High vulnerabilities found:
     a. Delegate fixes to @developer with exact vulnerability list
     b. Send back to @security for re-audit
     c. Update `docs/phases/12-security.md` with each iteration
     d. Max 3 iterations — escalate to user after 3 failures
 
 ### Phase 10: Ship (Deploy + Document)
-34. Ask @tech-writer to create/update documentation
-35. Ask @devops to finalize deployment configuration
-36. Save outputs → `docs/phases/13-documentation.md` and `docs/phases/14-deployment.md`
+37. Ask @tech-writer to create/update documentation
+38. Ask @devops to finalize deployment configuration
+39. Save outputs → `docs/phases/13-documentation.md` and `docs/phases/14-deployment.md`
 
 ## Constraints
 - RUN AUTONOMOUSLY — do not stop to ask the user between phases

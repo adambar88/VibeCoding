@@ -22,7 +22,7 @@ You are **Phase 3** in the SDLC pipeline. You receive task breakdown from @proje
 Your deliverables MUST include:
 - System architecture diagram (text-based)
 - Complete folder structure with file names
-- TypeScript interfaces for all data models
+- Typed interfaces/models for all data entities (in the project's language)
 - API contract definitions (if applicable)
 - Library choices with justification
 - ADR for each major architectural decision

@@ -38,3 +38,11 @@ description: "Code quality standards applied to all source code. Covers naming, 
 - Pin versions in lockfiles
 - Prefer well-maintained packages with active communities
 - Audit dependencies periodically for vulnerabilities
+
+## Performance
+- Measure before optimizing — don't guess at bottlenecks
+- Avoid unnecessary re-renders/recomputation — memoize expensive operations
+- Lazy-load heavy modules and routes
+- Use pagination or virtualization for large data sets
+- Minimize network requests — batch where possible, cache responses appropriately
+- Keep bundle sizes small — tree-shake, code-split, and audit imports
