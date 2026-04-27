@@ -48,7 +48,13 @@ A complete development team that works autonomously:
 
 ### MCP Servers (`.vscode/mcp.json`)
 
-- GitHub MCP pre-configured for issues/PRs from chat
+| Server | Purpose | Used By |
+|--------|---------|---------|
+| **GitHub** | Issues, PRs, branches, code search | @devops, @tech-lead |
+| **Playwright** | Browser automation, E2E testing, visual validation | @tester, @designer |
+| **Fetch** | HTTP requests, API docs, package research | @researcher, @security |
+| **Memory** | Persistent knowledge graph across sessions | @tech-lead |
+| **Filesystem** | Read/write files outside workspace | @devops |
 
 ## Quick Start
 
