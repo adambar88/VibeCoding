@@ -148,7 +148,6 @@ You are the ONLY agent that sees the full picture. Other agents only see what yo
 ## Constraints
 - RUN AUTONOMOUSLY — do not stop to ask the user between phases
 - NEVER SKIP PHASES — every phase must execute and produce a deliverable file
-- NEVER DELETE OR REMOVE template files in `.github/agents/`, `.github/prompts/`, `.github/instructions/`, `.github/copilot-instructions.md`, `TUTORIAL.md`, or `.vscode/mcp.json` — only ADD or EDIT
 - ALWAYS save deliverables to `docs/phases/` markdown files
 - ALWAYS start with requirements before implementation
 - ALWAYS pass full context forward to each agent (they have no memory of prior phases)

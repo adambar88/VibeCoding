@@ -15,7 +15,7 @@ You are running the complete software development lifecycle. Execute ALL phases 
 3. **Setup ≠ Implementation** — Phase 5 (Setup) creates the project skeleton with ZERO feature code. Phase 6 (Implementation) writes ALL feature code. Never combine them.
 4. **Fix loops must actually loop** — When @reviewer or @security finds Critical issues, delegate fixes to @developer, then send BACK to the auditor for re-review. Repeat up to 3 times.
 5. **Review and Security are SEPARATE phases** — Never combine them.
-6. **Preserve template files** — Do NOT delete, move, or overwrite any files in `.github/agents/`, `.github/prompts/`, `.github/instructions/`, `.github/copilot-instructions.md`, `TUTORIAL.md`, or `.vscode/mcp.json`. These are the agent team that is running this pipeline. Only the `@instructions-engineer` in Phase 5 may ADD new instruction files or edit `copilot-instructions.md` — never delete existing ones.
+6. **NEVER delete template files** — Do NOT remove or overwrite any files in `.github/agents/`, `.github/prompts/`, `.github/instructions/`, or `.vscode/mcp.json`. You may EDIT them to match the project stack, but they must continue to exist. `TUTORIAL.md` must also be preserved.
 
 ## Application to build: {{input}}
 

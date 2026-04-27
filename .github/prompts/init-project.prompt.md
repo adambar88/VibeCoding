@@ -8,20 +8,19 @@ tools: [read, edit, search, execute]
 
 Set up this project for a new application. Update all template files to match the project's specific needs.
 
-## CRITICAL: Preserve Template Files
-
-Do NOT delete, rename, or remove any of the following. Only **edit** their contents:
-- `.github/agents/` — all agent files must be kept
-- `.github/prompts/` — all prompt files must be kept
-- `.github/instructions/` — all instruction files must be kept
-- `.github/copilot-instructions.md`
-- `TUTORIAL.md`
-- `README.md`
-- `.vscode/mcp.json`
-
-Customization means **editing** placeholder sections, NOT replacing or deleting files.
-
 ## Project details: {{input}}
+
+## CRITICAL: Protected Template Files
+
+Do NOT delete, remove, or replace any of these template files. You may EDIT them to customize for the new stack, but they must continue to exist:
+- `.github/copilot-instructions.md`
+- `.github/instructions/*.instructions.md` (all instruction files)
+- `.github/prompts/*.prompt.md` (all prompt files)
+- `.github/agents/*.agent.md` (all agent files)
+- `.vscode/mcp.json`
+- `TUTORIAL.md`
+
+If a file is not relevant to the new stack (e.g., component instructions for a CLI tool), update its content to match the new stack rather than deleting it.
 
 ## Steps
 
@@ -30,8 +29,8 @@ Customization means **editing** placeholder sections, NOT replacing or deleting 
    - Remove the `<!-- UPDATE -->` comment markers
 
 2. **Update `.github/instructions/component.instructions.md`**:
-   - Replace the `<!-- UPDATE -->` sections with the actual UI framework's component patterns
-   - Do NOT delete this file — update it in place
+   - Adjust component/UI patterns to match the project's actual framework
+   - If the project has no UI (CLI, API-only), repurpose for the primary code pattern
 
 3. **Update `.github/instructions/testing.instructions.md`**:
    - Adjust to match the project's actual test framework (Vitest, Jest, Playwright, etc.)
