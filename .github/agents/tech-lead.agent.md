@@ -117,10 +117,13 @@ You are the ONLY agent that sees the full picture. Other agents only see what yo
 23. Save implementation summary → `docs/phases/09-implementation.md`
 24. **Verify**: project builds successfully
 
-### Phase 7: Testing
-25. Ask @tester to create test plan and write tests for ALL acceptance criteria
-26. Run tests — fix failures before proceeding
-27. Save test report → `docs/phases/10-testing.md`
+### Phase 7: Testing (STRICTEST GATE)
+25. Pass the FULL contents of `docs/phases/01-requirements.md` to @tester
+26. Ask @tester to create a test coverage matrix mapping EVERY acceptance criterion to a test
+27. Ask @tester to write tests for EVERY user story — not just utilities, but auth, CRUD, UI components, business logic
+28. Verify the coverage matrix: every user story must have at least one test. If not → send @tester back to write more
+29. Run tests — fix failures before proceeding
+30. Save test report → `docs/phases/10-testing.md` (must include coverage matrix)
 
 ### Phase 8: Review (Fix Loop)
 28. Ask @reviewer to review ALL implementation files
@@ -173,7 +176,7 @@ Each phase has exit criteria. Validate before moving on:
 | Skills | `docs/phases/07-skills.md` exists with skills installed or "none found" |
 | Setup | Project skeleton runs (`dev` command succeeds), no feature code written |
 | Implementation | All MVP tasks done, build succeeds |
-| Testing | All acceptance criteria have tests, tests pass |
+| Testing | EVERY user story has at least one test, coverage matrix maps all criteria, tests pass |
 | Review | No Critical issues open (fix loop completed if needed) |
 | Security | No Critical/High vulnerabilities open (fix loop completed if needed) |
 | Documentation | README + architecture docs exist |

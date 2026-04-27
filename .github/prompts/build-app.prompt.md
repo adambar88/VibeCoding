@@ -164,19 +164,53 @@ After EACH feature: mark the task complete in the todo list.
 
 **Gate**: All MVP tasks done, build succeeds.
 
-### PHASE 7: TESTING (Tester)
-Delegate to @tester:
-- Create a master test plan covering all acceptance criteria from `docs/phases/01-requirements.md`
-- Write unit tests for all utilities and business logic
-- Write component tests for all UI components
-- Write integration tests for API endpoints
-- Write E2E test scenarios (even if not automated yet)
-- Run tests and ensure ALL pass
-- Report coverage metrics and gaps
+### PHASE 7: TESTING (Tester) — WITH COVERAGE ENFORCEMENT
 
-**Save output → `docs/phases/10-testing.md`** (test plan, coverage, pass/fail)
+⚠️ **This phase has the strictest gate. Do NOT proceed unless EVERY user story has at least one test.**
 
-**Gate**: All acceptance criteria have corresponding tests and tests pass.
+Delegate to @tester with the FULL contents of `docs/phases/01-requirements.md`:
+
+**Step 1: Create test coverage matrix**
+- Read ALL user stories and acceptance criteria from `docs/phases/01-requirements.md`
+- For EACH acceptance criterion, plan at least one test
+- Output a matrix mapping every acceptance criterion → test file + test name
+- If a criterion cannot be unit-tested (e.g., needs real DB), write a component/integration test or document it as "E2E only" with a manual test script
+
+**Step 2: Write tests for EVERY user story**
+- Auth (login, signup, signout, redirect) — test auth hooks, login form, protected routes
+- CRUD operations — test form validation, service functions, list rendering
+- Dashboard — test data aggregation hooks, chart rendering with mock data
+- Any feature with business logic — test the logic functions directly
+- Shared components — test all reusable components
+
+**Step 3: Run and verify**
+- Run the full test suite and ensure ALL pass
+- Count: total tests, tests per user story, uncovered criteria
+
+**Save output → `docs/phases/10-testing.md`** with this EXACT structure:
+```
+## Test Coverage Matrix
+| User Story | Acceptance Criterion | Test File | Test Name | Status |
+|---|---|---|---|---|
+| US-1 | Valid login redirects to dashboard | auth.test.ts | should redirect... | ✅ |
+| US-1 | Invalid login shows error | auth.test.ts | should show error... | ✅ |
+[...every criterion must appear here...]
+
+## Test Results
+- Total tests: [N]
+- Passing: [N]
+- User stories covered: [X of Y] (must be Y of Y)
+- Acceptance criteria covered: [X of Z]
+
+## Gaps (if any)
+[Only E2E-only criteria are acceptable gaps. Everything else must have a test.]
+```
+
+**Gate**: 
+- EVERY user story from Phase 1 has at least one corresponding test
+- The test coverage matrix in `docs/phases/10-testing.md` maps every acceptance criterion to a test
+- All tests pass
+- If coverage is below 80% of acceptance criteria → FAIL the gate, write more tests
 
 ### PHASE 8: CODE REVIEW (Reviewer) — WITH FIX LOOP
 Delegate to @reviewer:
