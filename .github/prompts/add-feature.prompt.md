@@ -15,8 +15,9 @@ Add the following feature to the existing application: {{input}}
 3. **Architect**: Determine what files need to be created/modified, any new dependencies, and data model changes
 4. **Implement**: Use @developer (and @backend-developer if backend changes needed) to build the feature following existing patterns
 5. **Test**: Use @tester to write tests covering all acceptance criteria
-6. **Review**: Use @reviewer to check code quality, then fix any issues
+6. **Review**: Use @reviewer to check code quality, then fix any issues raised
 7. **Security**: Use @security if the feature involves auth, user data, or external APIs
+8. **Deploy**: Use @devops to verify CI/CD pipeline passes and the feature is ready to ship. If no pipeline exists, verify build + tests pass
 
 ## Rules
 
